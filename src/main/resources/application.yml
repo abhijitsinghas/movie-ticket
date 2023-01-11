@@ -1,0 +1,19 @@
+spring:
+  datasource:
+#    url: jdbc:h2:mem:mydb
+    url: jdbc:h2:file:~/moviedb
+    username: admin
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+  sql:
+    init:
+      mode: always
+debug: true
